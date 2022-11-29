@@ -1,11 +1,7 @@
 import React from "react";
 
 const App = () => {
-  return (
-    <ul>
-      <li>cocooco</li>
-    </ul>
-  );
+  return null;
 };
 
 export default App;
