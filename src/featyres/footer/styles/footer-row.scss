@@ -8,15 +8,20 @@
 }
 
 .footer-column {
-  padding: 0 10px 0 10px;
+  width: 285px;
+}
+
+.footer-column + .footer-column {
+  padding-left: 20px;
 }
 
 .footer-navigation-list {
-  width: 265px;
   &__item {
-    margin-bottom: 10px;
-    line-height: 1.5;
+    height: 35px;
     font-size: 16px;
+  }
+  &__item-link {
+    margin-bottom: 10px;
   }
 }
 

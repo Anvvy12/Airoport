@@ -1,10 +1,28 @@
 .sub-footer {
   border-top: 1px solid white;
   margin-top: 30px;
-  height: 90px;
   width: 1120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 18px;
+  color: #b8bdc1;
+  padding-top: 20px;
 }
 
-.info {
+.info-rigth {
   display: flex;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.info-left {
+  &__text {
+    width: 265px;
+  }
+}
+
+.made-by {
+  margin-left: auto;
 }

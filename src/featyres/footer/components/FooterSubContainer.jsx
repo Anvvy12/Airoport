@@ -5,11 +5,22 @@ const FooterSubContainer = () => {
   return (
     <div className="container">
       <div className="sub-footer">
-        <div className="info">
-          <div>sssssss</div>
-          <div>aaaaaaaaaa</div>
+        <div className="info-left">
+          <div className="info-left__text">
+            © 2011-2021 <br />
+            Міжнародний аеропорт «Київ»
+          </div>
         </div>
-        <div className="made-by">ffffffffff</div>
+        <div className="info-rigth">
+          <div>
+            Part of{' '}
+            <b>
+              {' '}
+              Ufuture <br /> Investment Group
+            </b>
+          </div>
+          <div className="made-by">Розробка сайту </div>
+        </div>
       </div>
     </div>
   );

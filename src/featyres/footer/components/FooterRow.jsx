@@ -9,22 +9,34 @@ const FooterRow = () => {
           <nav className="footer-navigation">
             <ul className="footer-navigation-list">
               <li className="footer-navigation-list__item column-title">
-                <a href="#">Пасажирам</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Пасажирам
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Розклад рейсів</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Розклад рейсів
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Замовлення послуг</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Замовлення послуг
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Контактна інформація</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Контактна інформація
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Політика конфіденційності</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Політика конфіденційності
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Форма відгуків та пропозицій</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Форма відгуків та пропозицій
+                </a>
               </li>
             </ul>
           </nav>
@@ -33,22 +45,34 @@ const FooterRow = () => {
           <nav className="footer-navigation">
             <ul className="footer-navigation-list">
               <li className="footer-navigation-list__item column-title">
-                <a href="#">Партнерам</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Партнерам
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Головна</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Головна
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Наземне обслуговування</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Наземне обслуговування
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Характеристики аеродрому</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Характеристики аеродрому
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Учбовий центр</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Учбовий центр
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Ваканciї</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Ваканciї
+                </a>
               </li>
             </ul>
           </nav>
@@ -57,22 +81,34 @@ const FooterRow = () => {
           <nav className="footer-navigation">
             <ul className="footer-navigation-list">
               <li className="footer-navigation-list__item  column-title">
-                <a href="#">Пресцентр</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Пресцентр
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Головна пресцентрy</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Головна пресцентрy
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Останні новин</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Останні новин
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Соціальні та артпроект</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Соціальні та артпроект
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Фінансова звітніст</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Фінансова звітніст
+                </a>
               </li>
               <li className="footer-navigation-list__item">
-                <a href="#">Статистика пасажиропотоку</a>
+                <a className="folow-us-list__item-link" href="#">
+                  Статистика пасажиропотоку
+                </a>
               </li>
             </ul>
           </nav>
@@ -82,34 +118,34 @@ const FooterRow = () => {
             <div className="helephone">
               <div className="title">Авіадовідка</div>
               <div className="number">
-                <a>+38 (044) 500 49 73</a>
+                <a className="folow-us-list__item-link">+38 (044) 500 49 73</a>
               </div>
             </div>
             <div className="folow-us">
               <div className="title">Приєднуйтесь до нас</div>
               <ul className="folow-us-list">
                 <li className="folow-us-list__item">
-                  <a>
+                  <a className="folow-us-list__item-link">
                     <img src="/" alt="fk" />
                   </a>
                 </li>
                 <li className="folow-us-list__item">
-                  <a>
+                  <a className="folow-us-list__item-link">
                     <img src="/" alt="tv" />
                   </a>
                 </li>
                 <li className="folow-us-list__item">
-                  <a>
+                  <a className="folow-us-list__item-link">
                     <img src="/" alt="ins" />
                   </a>
                 </li>
                 <li className="folow-us-list__item">
-                  <a>
+                  <a className="folow-us-list__item-link">
                     <img src="/" alt="yt" />
                   </a>
                 </li>
                 <li className="folow-us-list__item">
-                  <a>
+                  <a className="folow-us-list__item-link">
                     <img src="/" alt="in" />
                   </a>
                 </li>
