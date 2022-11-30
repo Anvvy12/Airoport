@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import Header from './featyres/header/components/Header';
 
 const App = () => {
-  return null;
+  return <Header />;
 };
 
 export default App;
