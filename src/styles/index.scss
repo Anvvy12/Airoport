@@ -1,4 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   font-family: open sans, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.test {
+  height: 1400px;
 }
