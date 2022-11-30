@@ -28,10 +28,11 @@
     height: 100%;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   &__item-text {
     padding: 0 35px 0 35px;
-    cursor: pointer;
+
     font-size: 20px;
     font-weight: 600;
     color: #fff;
@@ -47,6 +48,7 @@
     color: #fff;
     background: #1eb7ee;
     border: none;
+    cursor: pointer;
   }
 }
 
