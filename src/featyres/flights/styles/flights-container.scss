@@ -1,0 +1,20 @@
+.flights-container {
+  margin-top: 40px;
+  width: 1120px;
+}
+
+.flights-sortList {
+  display: flex;
+  justify-content: space-around;
+
+  &__item {
+    width: 50%;
+    line-height: 60px;
+    background-color: #73d2f0;
+    color: #fff;
+  }
+}
+.actual {
+  color: #73d2f0;
+  background-color: #fff;
+}

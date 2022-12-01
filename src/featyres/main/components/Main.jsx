@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from '../../search/components/Search';
-import FlightsBlock from '../../flights/components/FlightsBlock';
+import FlightsContainer from '../../flights/components/FlightsContainer';
 import '../styles/main.scss';
 
 const Main = () => {
@@ -8,7 +8,7 @@ const Main = () => {
     <main className="main">
       <div className="central-side">
         <Search />
-        <FlightsBlock />
+        <FlightsContainer />
       </div>
     </main>
   );
