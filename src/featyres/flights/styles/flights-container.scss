@@ -1,3 +1,20 @@
+@keyframes secondary-mouse-on {
+  from {
+    background-color: #73d2f0;
+  }
+  to {
+    background-color: #1eb7ee;
+  }
+}
+@keyframes secondary-mouse-off {
+  from {
+    background-color: #1eb7ee;
+  }
+  to {
+    background-color: #73d2f0;
+  }
+}
+
 .flights-container {
   margin-top: 40px;
   width: 1120px;
@@ -28,14 +45,14 @@
 }
 
 .flights-nav-site:hover {
-  background-color: #1eb7ee;
+  animation: secondary-mouse-on 0.4s forwards;
 }
 .secondary {
   color: #fff;
 }
 
 .secondary:hover {
-  background-color: #1eb7ee;
+  animation: secondary-mouse-on 0.4s forwards;
 }
 
 .left-side {
