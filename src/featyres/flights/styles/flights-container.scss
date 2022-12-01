@@ -35,6 +35,7 @@
   background-color: #73d2f0;
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
+  animation: secondary-mouse-off 0.4s forwards;
 }
 
 .actual {
@@ -42,6 +43,8 @@
   border-top-right-radius: 80px;
   color: #1eb7ee;
   background-color: #fff;
+  position: relative;
+  z-index: 111;
 }
 
 .flights-nav-site:hover {
@@ -49,10 +52,6 @@
 }
 .secondary {
   color: #fff;
-}
-
-.secondary:hover {
-  animation: secondary-mouse-on 0.4s forwards;
 }
 
 .left-side {
