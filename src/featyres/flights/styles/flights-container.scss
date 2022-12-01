@@ -6,15 +6,45 @@
 .flights-sortList {
   display: flex;
   justify-content: space-around;
-
   &__item {
+    cursor: pointer;
     width: 50%;
+    font-size: 24px;
     line-height: 60px;
-    background-color: #73d2f0;
-    color: #fff;
   }
 }
+
+.flights-nav-site {
+  background-color: #73d2f0;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+}
+
 .actual {
-  color: #73d2f0;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  color: #1eb7ee;
   background-color: #fff;
+}
+
+.flights-nav-site:hover {
+  background-color: #1eb7ee;
+}
+.secondary {
+  color: #fff;
+}
+
+.secondary:hover {
+  background-color: #1eb7ee;
+}
+
+.left-side {
+  border-top-left-radius: 80px;
+  padding-right: 100px;
+  text-align: end;
+}
+
+.right-side {
+  padding-left: 100px;
+  border-top-right-radius: 80px;
 }
