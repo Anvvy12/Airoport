@@ -16,10 +16,10 @@ const FlightstableRow = () => {
         Вилетів о 6:19
       </th>
       <th className="table-down" scope="col">
-        логотип ЛОТ
+        Логотип ЛОТ
       </th>
       <th className="table-down" scope="col">
-        рейс
+        Рейс
       </th>
       <td className="table-down" scope="col">
         Деталі рейсу
