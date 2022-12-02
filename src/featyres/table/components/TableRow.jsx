@@ -2,7 +2,7 @@ import React from 'react';
 
 const FlightstableRow = () => {
   return (
-    <tr className="table-row">
+    <tr className="table-row flights">
       <th className="table-down" scope="col">
         A
       </th>

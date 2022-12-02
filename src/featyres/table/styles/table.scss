@@ -1,6 +1,3 @@
-.table-row {
-}
-
 .table-down {
   text-transform: capitalize;
   padding: 0.75em;
@@ -11,4 +8,31 @@
   line-height: 40px;
   padding: 16px 10px;
   border: 0;
+}
+
+.table {
+  margin: 35px 0 16px 0;
+  table-layout: auto;
+  width: 100%;
+}
+
+.table-row:nth-child(odd) {
+  background: #e5eff3;
+}
+
+.flights:nth-child(even) {
+  position: relative;
+  z-index: 1;
+}
+
+.flights:hover {
+  box-shadow: 0 5px 10px rgb(37 40 41 / 30%);
+}
+
+.table-head {
+  color: #95989a;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  text-align: start;
 }
