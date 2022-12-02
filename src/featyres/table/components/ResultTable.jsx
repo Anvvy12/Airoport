@@ -4,7 +4,7 @@ import DataContainer from '../../flights/components/DataContainer';
 import TableHead from './TableHead';
 import '../styles/result-container.scss';
 
-const FlightsTable = () => {
+const ResultTable = () => {
   return (
     <div className="result-container">
       <div className="table-container">
@@ -22,4 +22,4 @@ const FlightsTable = () => {
   );
 };
 
-export default FlightsTable;
+export default ResultTable;
