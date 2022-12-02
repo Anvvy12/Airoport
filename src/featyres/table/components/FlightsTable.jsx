@@ -1,6 +1,6 @@
 import React from 'react';
 import FlightsTableRow from './FlightsTableRow';
-import DataContainer from './DataContainer';
+import DataContainer from '../../flights/components/DataContainer';
 import TableHead from './TableHead';
 import '../styles/result-container.scss';
 
@@ -11,9 +11,7 @@ const FlightsTable = () => {
         <DataContainer />
         <div className="result-table">
           <table className="table">
-            <thead className="table-head">
-              <TableHead />
-            </thead>
+            <TableHead />
             <tbody>
               <FlightsTableRow />
             </tbody>

@@ -1,5 +1,5 @@
 import React from 'react';
-import FlightsTable from './FlightsTable';
+import FlightsTable from '../../table/components/FlightsTable';
 import '../styles/flights-container.scss';
 
 const FlightsContainer = () => {
