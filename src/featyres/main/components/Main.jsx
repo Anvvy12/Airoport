@@ -1,6 +1,7 @@
 import React from 'react';
 import Search from '../../search/components/Search';
 import ResultContainer from '../../flights/components/ResultContainer';
+import CovidInfo from '../../covidInfo/components/CovidInfo';
 import '../styles/main.scss';
 
 const Main = () => {
@@ -9,6 +10,7 @@ const Main = () => {
       <div className="central-side">
         <Search />
         <ResultContainer />
+        <CovidInfo />
       </div>
     </main>
   );
