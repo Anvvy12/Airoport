@@ -1,5 +1,5 @@
 import React from 'react';
-import FlightsTablet from './FlightsTablet';
+import FlightsTable from './FlightsTable';
 import '../styles/flights-container.scss';
 
 const FlightsContainer = () => {
@@ -11,7 +11,7 @@ const FlightsContainer = () => {
           <li className="flights-sortList__item secondary right-side">ПРИЛІТ</li>
         </ul>
       </div>
-      <FlightsTablet />
+      <FlightsTable />
     </div>
   );
 };

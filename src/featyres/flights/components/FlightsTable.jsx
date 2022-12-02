@@ -1,20 +1,21 @@
 import React from 'react';
-import FlightsTabletRow from './FlightsTabletRow';
+import FlightsTableRow from './FlightsTableRow';
 import DataContainer from './DataContainer';
+import TableHead from './TableHead';
 import '../styles/result-container.scss';
 
-const FlightsTablet = () => {
+const FlightsTable = () => {
   return (
     <div className="result-container">
-      <div className="tablet-container">
+      <div className="table-container">
         <DataContainer />
-        <div className="result-tablet">
+        <div className="result-table">
           <table className="table">
             <thead className="table-head">
-              <FlightsTabletRow />
+              <TableHead />
             </thead>
             <tbody>
-              <FlightsTabletRow />
+              <FlightsTableRow />
             </tbody>
           </table>
         </div>
@@ -23,4 +24,4 @@ const FlightsTablet = () => {
   );
 };
 
-export default FlightsTablet;
+export default FlightsTable;
