@@ -3,11 +3,17 @@
 }
 
 .table {
-  margin: 35px 0 16px 0;
+  margin-top: 35px;
+  table-layout: auto;
+  width: 100%;
 }
 
 .table-head {
+  color: #95989a;
+  font-size: 16px;
+  font-weight: 600;
   height: 48px;
+  text-align: start;
 }
 
 .data-container {

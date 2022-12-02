@@ -3,7 +3,15 @@ import TableRow from './TableRow';
 
 const TableBody = () => {
   return (
-    <tbody>
+    <tbody className="table-body">
+      <TableRow />
+      <TableRow />
+      <TableRow />
+      <TableRow />
+      <TableRow />
+      <TableRow />
+      <TableRow />
+      <TableRow />
       <TableRow />
     </tbody>
   );

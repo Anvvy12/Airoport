@@ -1,7 +1,6 @@
 import React from 'react';
 import DataContainer from '../../flights/components/DataContainer';
-import TableHead from './TableHead';
-import TableBody from './TableBody';
+import Table from './Table';
 import '../styles/result-container.scss';
 
 const ResultTable = () => {
@@ -10,10 +9,7 @@ const ResultTable = () => {
       <div className="table-container">
         <DataContainer />
         <div className="result-table">
-          <table className="table">
-            <TableHead />
-            <TableBody />
-          </table>
+          <Table />
         </div>
       </div>
     </div>

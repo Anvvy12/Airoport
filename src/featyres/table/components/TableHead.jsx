@@ -1,29 +1,30 @@
 import React from 'react';
-import '../styles/table-row.scss';
 
 const TableHead = () => {
   return (
     <thead className="table-head">
       <tr className="table-row">
-        <td className="table-down" scope="col">
+        <th className="table-down" scope="col">
           термінал
-        </td>
-        <td className="table-down" scope="col">
+        </th>
+        <th className="table-down" scope="col">
           розклад
-        </td>
+        </th>
         <td className="table-down" scope="col">
           напрямок
         </td>
-        <td className="table-down" scope="col">
+        <th className="table-down" scope="col">
           статус
-        </td>
-        <td className="table-down" scope="col">
+        </th>
+        <th className="table-down" scope="col">
           авіакомпанія
-        </td>
-        <td className="table-down" scope="col">
+        </th>
+        <th className="table-down" scope="col">
           рейс
+        </th>
+        <td className="table-down" scope="col">
+          Деталі рейсу
         </td>
-        <td className="table-down" scope="col"></td>
       </tr>
     </thead>
   );
