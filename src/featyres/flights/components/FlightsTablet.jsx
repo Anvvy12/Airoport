@@ -8,15 +8,14 @@ const FlightsTablet = () => {
     <div className="result-container">
       <div className="tablet-container">
         <DataContainer />
-
         <div className="result-tablet">
           <table className="table">
             <thead className="table-head">
-              <tr>
-                <td>sssssssss</td>
-              </tr>
+              <FlightsTabletRow />
             </thead>
-            <FlightsTabletRow />
+            <tbody>
+              <FlightsTabletRow />
+            </tbody>
           </table>
         </div>
       </div>
