@@ -5,22 +5,22 @@ const TableHead = () => {
     <thead className="table-head">
       <tr className="table-head-row">
         <th className="table-down" scope="col">
-          термінал
+          Термінал
         </th>
         <th className="table-down" scope="col">
-          розклад
+          Розклад
         </th>
         <td className="table-down" scope="col">
-          напрямок
+          Напрямок
         </td>
         <th className="table-down" scope="col">
-          статус
+          Статус
         </th>
         <th className="table-down" scope="col">
-          авіакомпанія
+          Авіакомпанія
         </th>
         <th className="table-down" scope="col">
-          рейс
+          Рейс
         </th>
         <td className="table-down" scope="col">
           Деталі рейсу

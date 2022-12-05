@@ -1,27 +1,29 @@
 import React from 'react';
 
-const FlightstableRow = () => {
+const FlightstableRow = ({ term, logo, cityTo, num }) => {
+  const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
+  let ditals = 'ditals-none';
   return (
     <tr className="table-row flights">
       <th className="table-down" scope="col">
-        A
+        <span className={classTerm}>{term}</span>
       </th>
       <th className="table-down" scope="col">
         5:40
       </th>
       <td className="table-down" scope="col">
-        Варшава
+        {cityTo}
       </td>
       <th className="table-down" scope="col">
         Вилетів о 6:19
       </th>
       <th className="table-down" scope="col">
-        Логотип ЛОТ
+        <img src={logo} /> ЛОТ
       </th>
       <th className="table-down" scope="col">
-        Рейс
+        {num}
       </th>
-      <td className="table-down" scope="col">
+      <td className="table-down ditals" scope="col">
         Деталі рейсу
       </td>
     </tr>

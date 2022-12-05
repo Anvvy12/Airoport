@@ -1,18 +1,18 @@
-import * as gateWay from '../../flights.gateway';
+import { fetchFlights } from '../../flights.gateway';
 
 export const FILL_TABLE_START_FLIGHTS = 'TABLE/FILL_TABLE_START_FLIGHTS';
 
-const fillStartFlights = flights => {
+export const fillStartFlights = departure => {
   return {
     type: FILL_TABLE_START_FLIGHTS,
     payload: {
-      flights,
+      departure,
     },
   };
 };
 
 export const fetchStartFlights = () => {
   return function (dispatch) {
-    gateWay.fetchFlights().then(flights => fillStartFlights(flights));
+    fetchFlights().then(flights => dispatch(fillStartFlights(flights.body.departure)));
   };
 };
