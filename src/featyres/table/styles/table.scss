@@ -1,6 +1,6 @@
 .table-down {
   padding: 0.75em;
-  text-align: start;
+  text-align: center;
   &__termA {
     color: #63c745;
     font-weight: 700;
@@ -46,6 +46,9 @@
 
 .table-row:nth-child(odd) {
   background: #e5eff3;
+}
+.flights {
+  text-align: center;
 }
 
 .flights:nth-child(even) {

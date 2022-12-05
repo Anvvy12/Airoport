@@ -1,11 +1,10 @@
 import React from 'react';
 
-const FlightstableRow = ({ term, logo, cityTo, num }) => {
+const FlightstableRow = ({ term, logo, cityTo, num, companyName }) => {
   const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
-  let ditals = 'ditals-none';
   return (
     <tr className="table-row flights">
-      <th className="table-down" scope="col">
+      <th className="table-down term" scope="col">
         <span className={classTerm}>{term}</span>
       </th>
       <th className="table-down" scope="col">
@@ -19,6 +18,7 @@ const FlightstableRow = ({ term, logo, cityTo, num }) => {
       </th>
       <th className="table-down" scope="col">
         <img src={logo} />
+        <span>{companyName}</span>
       </th>
       <th className="table-down" scope="col">
         {num}

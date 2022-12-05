@@ -3,7 +3,7 @@ import React from 'react';
 const TableHead = () => {
   return (
     <thead className="table-head">
-      <tr className="table-head-row">
+      <tr className="table-head-row term">
         <th className="table-down" scope="col">
           Термінал
         </th>
@@ -22,9 +22,7 @@ const TableHead = () => {
         <th className="table-down" scope="col">
           Рейс
         </th>
-        <td className="table-down" scope="col">
-          Деталі рейсу
-        </td>
+        <td className="table-down" scope="col"></td>
       </tr>
     </thead>
   );

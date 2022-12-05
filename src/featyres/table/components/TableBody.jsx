@@ -17,6 +17,7 @@ const TableBody = ({ getFlights, flights }) => {
           logo={flights.logo}
           cityTo={flights['airportToID.city']}
           num={String(flights['carrierID.IATA'] + flights.fltNo)}
+          companyName={flights['carrierID.code']}
         />
       ))}
     </tbody>
