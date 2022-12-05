@@ -18,7 +18,7 @@ const FlightstableRow = ({ term, logo, cityTo, num }) => {
         Вилетів о 6:19
       </th>
       <th className="table-down" scope="col">
-        <img src={logo} /> ЛОТ
+        <img src={logo} />
       </th>
       <th className="table-down" scope="col">
         {num}
