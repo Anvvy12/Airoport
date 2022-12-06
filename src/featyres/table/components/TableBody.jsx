@@ -5,10 +5,11 @@ import * as flightsActions from '../table.actions.js';
 import * as selectors from '../table.selectors';
 
 const TableBody = ({ getFlights, flights }) => {
-  useEffect(() => {
-    getFlights();
-  }, []);
+  // useEffect(() => {
+  //   getFlights();
+  // }, []);
   const currentFlights = flights.splice(0, 23);
+
   return (
     <tbody className="table-body">
       {currentFlights.map(flight => (
@@ -32,7 +33,7 @@ const mapDispatch = {
 
 const mapState = state => {
   return {
-    flights: selectors.flightsDepartureSelector(state),
+    flights: selectors.actualFlightsSelector(state),
   };
 };
 

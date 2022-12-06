@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeDepFact }) => {
-  const tieDeparture = timeDepFact.substring(12, 16);
+  const timeDeparture = timeDepFact.substring(12, 16);
 
   const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
   return (
@@ -16,7 +16,7 @@ const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeDepFact }) 
         {cityTo}
       </td>
       <th className="table-down" scope="col">
-        Вилетів o {tieDeparture}
+        Вилетів o {timeDeparture}
       </th>
       <th className="table-down" scope="col">
         <img src={logo} className="table-down__img" />
@@ -31,5 +31,11 @@ const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeDepFact }) 
     </tr>
   );
 };
+
+// const mapState = state => {
+//   return {
+//     filteredValue: selectors.searchValueSelector(state),
+//   };
+// };
 
 export default FlightstableRow;

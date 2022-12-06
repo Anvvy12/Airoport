@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { connect } from 'react-redux';
+import * as searchActions from '../search.actions';
+import * as searchSelectors from '../search.selectors.js';
 import '../styles/search.scss';
 
-const Search = () => {
+const Search = ({ getSertchValue }) => {
+  const [serchParam, setSearchParam] = useState('');
+
+  const handlChange = event => {
+    setSearchParam(event.target.value);
+  };
+
+  const handleSearch = () => {
+    getSertchValue(serchParam);
+  };
   return (
     <div className="search-container">
       <div className="search-form-container">
@@ -17,9 +29,12 @@ const Search = () => {
               className="search-form-block__input"
               type="text"
               placeholder="Номер рейсу або місто"
+              value={serchParam}
+              onChange={handlChange}
             />
-
-            <button className="search-form-block__btn">знайти</button>
+            <button className="search-form-block__btn" onClick={handleSearch}>
+              знайти
+            </button>
           </div>
         </form>
       </div>
@@ -27,4 +42,8 @@ const Search = () => {
   );
 };
 
-export default Search;
+const mapDispatch = {
+  getSertchValue: searchActions.getSerachingFlights,
+};
+
+export default connect(null, mapDispatch)(Search);
