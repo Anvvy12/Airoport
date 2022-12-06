@@ -5,9 +5,9 @@ import * as flightsActions from '../table.actions.js';
 import * as selectors from '../table.selectors';
 
 const TableBody = ({ getFlights, flights }) => {
-  // useEffect(() => {
-  //   getFlights();
-  // }, []);
+  useEffect(() => {
+    getFlights();
+  }, []);
   const currentFlights = flights.splice(0, 23);
 
   return (
@@ -21,6 +21,7 @@ const TableBody = ({ getFlights, flights }) => {
           num={String(flight['carrierID.IATA'] + flight.fltNo)}
           companyName={flight['carrierID.code']}
           timeDepFact={flight.timeDepFact}
+          timeDepExpectCalc={flight.timeDepExpectCalc}
         />
       ))}
     </tbody>

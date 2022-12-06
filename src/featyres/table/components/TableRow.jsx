@@ -1,7 +1,16 @@
 import React from 'react';
 
-const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeDepFact }) => {
-  const timeDeparture = timeDepFact.substring(12, 16);
+const FlightstableRow = ({
+  term,
+  logo,
+  cityTo,
+  num,
+  companyName,
+  timeDepFact,
+  timeDepExpectCalc,
+}) => {
+  const timeDepartureFakt = timeDepFact.substring(12, 16);
+  const timeDepartureCalc = timeDepExpectCalc.substring(12, 16);
 
   const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
   return (
@@ -10,13 +19,13 @@ const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeDepFact }) 
         <span className={classTerm}>{term}</span>
       </th>
       <th className="table-down" scope="col">
-        5:40
+        {timeDepartureCalc}
       </th>
       <td className="table-down" scope="col">
         {cityTo}
       </td>
       <th className="table-down" scope="col">
-        Вилетів o {timeDeparture}
+        Вилетів o {timeDepartureFakt}
       </th>
       <th className="table-down" scope="col">
         <img src={logo} className="table-down__img" />
