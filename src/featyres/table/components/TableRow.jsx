@@ -1,7 +1,7 @@
 import React from 'react';
 
-const FlightstableRow = ({ term, logo, cityTo, num, companyName }) => {
-  console.log(logo);
+const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeDepFact }) => {
+  const tieDeparture = timeDepFact.substring(12, 16);
 
   const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
   return (
@@ -16,10 +16,10 @@ const FlightstableRow = ({ term, logo, cityTo, num, companyName }) => {
         {cityTo}
       </td>
       <th className="table-down" scope="col">
-        Вилетів
+        Вилетів o {tieDeparture}
       </th>
       <th className="table-down" scope="col">
-        <i src={logo} styles="width:20px; height: 20px;" />
+        <img src={logo} className="table-down__img" />
         <span>{companyName}</span>
       </th>
       <th className="table-down" scope="col">
