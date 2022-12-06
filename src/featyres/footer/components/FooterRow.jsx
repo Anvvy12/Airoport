@@ -131,7 +131,7 @@ const FooterRow = () => {
                 </li>
                 <li className="folow-us-list__item">
                   <a className="folow-us-list__item-link">
-                    <img src="/" alt="tv" />
+                    <i src="/" alt="tv" className="folow-us-list__item-link-svg" />
                   </a>
                 </li>
                 <li className="folow-us-list__item">

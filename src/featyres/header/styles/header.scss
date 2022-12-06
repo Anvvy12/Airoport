@@ -54,7 +54,8 @@
 
 .logo-container {
   width: 100%;
+  padding-left: 120px;
   &__logo {
-    width: 100%;
+    max-width: 180px;
   }
 }

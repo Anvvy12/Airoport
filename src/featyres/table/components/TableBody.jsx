@@ -8,9 +8,10 @@ const TableBody = ({ getFlights, flights }) => {
   useEffect(() => {
     getFlights();
   }, []);
+  const currentFlights = flights.splice(0, 23);
   return (
     <tbody className="table-body">
-      {flights.map(flights => (
+      {currentFlights.map(flights => (
         <TableRow
           term={flights.term}
           key={flights.ID}

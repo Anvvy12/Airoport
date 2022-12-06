@@ -1,11 +1,16 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import '../styles/data-container.scss';
 
 const DataContainer = () => {
   return (
     <div className="calendar-date-wrapper">
       <div className="calendar-container ">
-        <button className="calendar-button">cal img</button>
+        <input type="date" className="calendar-button" value="" />
+        {/* <button className="calendar-button">
+          <FontAwesomeIcon icon={faCalendarDays} />
+        </button> */}
       </div>
       <div className="dates-container  ">
         <div className="date esterday">
