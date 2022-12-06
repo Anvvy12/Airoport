@@ -1,6 +1,8 @@
 import React from 'react';
 
 const FlightstableRow = ({ term, logo, cityTo, num, companyName }) => {
+  console.log(logo);
+
   const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
   return (
     <tr className="table-row flights">
@@ -17,7 +19,7 @@ const FlightstableRow = ({ term, logo, cityTo, num, companyName }) => {
         Вилетів
       </th>
       <th className="table-down" scope="col">
-        <img src={logo} />
+        <i src={logo} styles="width:20px; height: 20px;" />
         <span>{companyName}</span>
       </th>
       <th className="table-down" scope="col">

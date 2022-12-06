@@ -66,3 +66,17 @@
     animation: angel-btn-up 0.4s forwards;
   }
 }
+
+.search-icon {
+  font-size: 30px;
+  line-height: 26px;
+  left: 25px;
+  top: 25px;
+  color: grey;
+
+  text-align: center;
+  margin-right: -26px;
+  position: relative;
+  z-index: 1;
+  float: left;
+}

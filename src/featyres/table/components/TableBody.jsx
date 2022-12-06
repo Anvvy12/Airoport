@@ -11,14 +11,14 @@ const TableBody = ({ getFlights, flights }) => {
   const currentFlights = flights.splice(0, 23);
   return (
     <tbody className="table-body">
-      {currentFlights.map(flights => (
+      {currentFlights.map(flight => (
         <TableRow
-          term={flights.term}
-          key={flights.ID}
-          logo={flights.logo}
-          cityTo={flights['airportToID.city']}
-          num={String(flights['carrierID.IATA'] + flights.fltNo)}
-          companyName={flights['carrierID.code']}
+          term={flight.term}
+          key={flight.ID}
+          logo={flight.logo}
+          cityTo={flight['airportToID.city']}
+          num={String(flight['carrierID.IATA'] + flight.fltNo)}
+          companyName={flight['carrierID.code']}
         />
       ))}
     </tbody>
