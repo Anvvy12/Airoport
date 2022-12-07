@@ -1,13 +1,24 @@
 import React from 'react';
 import TableHead from './TableHead';
-import TableBody from './TableBody';
+import TableBodyDeparture from './TableBodyDeparture';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import '../styles/table.scss';
+import TableBodyArrival from './TableBodyArrival';
 
 const Table = () => {
   return (
     <table className="table">
       <TableHead />
-      <TableBody />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <TableBodyDeparture />
+          </Route>
+          <Route exact path="/arrival">
+            <TableBodyArrival />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </table>
   );
 };

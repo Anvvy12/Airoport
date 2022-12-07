@@ -1,16 +1,8 @@
 import React from 'react';
 
-const FlightstableRow = ({
-  term,
-  logo,
-  cityTo,
-  num,
-  companyName,
-  timeDepFact,
-  timeDepExpectCalc,
-}) => {
-  const timeDepartureFakt = timeDepFact.substring(12, 16);
-  const timeDepartureCalc = timeDepExpectCalc.substring(12, 16);
+const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeCalc, timeFact }) => {
+  const timeDepartureFakt = timeFact.substring(12, 16);
+  const timeDepartureCalc = timeCalc.substring(12, 16);
 
   const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
   return (
@@ -40,11 +32,5 @@ const FlightstableRow = ({
     </tr>
   );
 };
-
-// const mapState = state => {
-//   return {
-//     filteredValue: selectors.searchValueSelector(state),
-//   };
-// };
 
 export default FlightstableRow;

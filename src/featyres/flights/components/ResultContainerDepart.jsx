@@ -9,10 +9,14 @@ const ResultContainerDepart = () => {
       <div className="flights-nav-site">
         <ul className="flights-sortList">
           <li className="flights-sortList__item actual left-side">
-            <Link to="/">ВИЛІТ</Link>
+            <Link to="/" className="arrival-actual">
+              ВИЛІТ
+            </Link>
           </li>
           <li className="flights-sortList__item secondary right-side">
-            <Link to="/arrival"> ПРИЛІТ</Link>
+            <Link to="/arrival" className="arrival-secondary">
+              ПРИЛІТ
+            </Link>
           </li>
         </ul>
       </div>

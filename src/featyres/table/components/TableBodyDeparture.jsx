@@ -4,7 +4,7 @@ import TableRow from './TableRow';
 import * as flightsActions from '../table.actions.js';
 import * as selectors from '../table.selectors';
 
-const TableBody = ({ getFlights, departure, arival }) => {
+const TableBodyDeparture = ({ getFlights, departure, arival }) => {
   useEffect(() => {
     getFlights();
   }, []);
@@ -20,8 +20,8 @@ const TableBody = ({ getFlights, departure, arival }) => {
           cityTo={flight['airportToID.city']}
           num={String(flight['carrierID.IATA'] + flight.fltNo)}
           companyName={flight['carrierID.code']}
-          timeDepFact={flight.timeDepFact}
-          timeDepExpectCalc={flight.timeDepExpectCalc}
+          timeFact={flight.timeDepFact}
+          timeCalc={flight.timeDepExpectCalc}
         />
       ))}
     </tbody>
@@ -35,8 +35,7 @@ const mapDispatch = {
 const mapState = state => {
   return {
     departure: selectors.departureSelector(state),
-    arival: selectors.arivalSelector(state),
   };
 };
 
-export default connect(mapState, mapDispatch)(TableBody);
+export default connect(mapState, mapDispatch)(TableBodyDeparture);
