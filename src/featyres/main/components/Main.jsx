@@ -1,7 +1,9 @@
 import React from 'react';
 import Search from '../../search/components/Search';
-import ResultContainer from '../../flights/components/ResultContainer';
+import ResultContainerDepart from '../../flights/components/ResultContainerDepart';
+import ResultContainerArrival from '../../flights/components/ResultContainerArrival';
 import CovidInfo from '../../covidInfo/components/CovidInfo';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import '../styles/main.scss';
 
 const Main = () => {
@@ -9,7 +11,16 @@ const Main = () => {
     <main className="main">
       <div className="central-side">
         <Search />
-        <ResultContainer />
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/">
+              <ResultContainerDepart />
+            </Route>
+            <Route path="/arrival">
+              <ResultContainerArrival />
+            </Route>
+          </Switch>
+        </BrowserRouter>
         <CovidInfo />
       </div>
     </main>

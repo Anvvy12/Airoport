@@ -9,7 +9,6 @@ const TableBody = ({ getFlights, departure, arival }) => {
     getFlights();
   }, []);
   const currentFlights = departure.splice(0, 23);
-  console.log(arival);
 
   return (
     <tbody className="table-body">
