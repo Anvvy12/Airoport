@@ -4,11 +4,12 @@ import TableRow from './TableRow';
 import * as flightsActions from '../table.actions.js';
 import * as selectors from '../table.selectors';
 
-const TableBody = ({ getFlights, flights }) => {
+const TableBody = ({ getFlights, departure, arival }) => {
   useEffect(() => {
     getFlights();
   }, []);
-  const currentFlights = flights.splice(0, 23);
+  const currentFlights = departure.splice(0, 23);
+  console.log(arival);
 
   return (
     <tbody className="table-body">
@@ -34,7 +35,8 @@ const mapDispatch = {
 
 const mapState = state => {
   return {
-    flights: selectors.actualFlightsSelector(state),
+    departure: selectors.departureSelector(state),
+    arival: selectors.arivalSelector(state),
   };
 };
 
