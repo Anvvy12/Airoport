@@ -1,8 +1,8 @@
 import React from 'react';
 
 const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeCalc, timeFact }) => {
-  const timeDepartureFakt = timeFact.substring(12, 16);
-  const timeDepartureCalc = timeCalc.substring(12, 16);
+  const timeDepartureFakt = timeFact ? timeFact.substring(12, 16) : '00:00';
+  const timeDepartureCalc = timeCalc ? timeCalc.substring(12, 16) : '00:00';
 
   const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
   return (

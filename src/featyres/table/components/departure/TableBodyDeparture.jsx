@@ -1,19 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import TableRow from './TableRowDeparture';
-import * as flightsActions from '../../table.actions.js';
 import * as selectors from '../../table.selectors';
 
-const TableBodyDeparture = ({ getFlights, departure, arival }) => {
-  useEffect(() => {
-    console.log('fetch');
-    getFlights();
-  }, []);
-  const currentFlights = departure.splice(0, 23);
+const TableBodyDeparture = ({ departure }) => {
+  // const currentFlights = departure.splice(0, 23);
 
   return (
     <tbody className="table-body">
-      {currentFlights.map(flight => (
+      {departure.map(flight => (
         <TableRow
           term={flight.term}
           key={flight.ID}
@@ -29,14 +24,10 @@ const TableBodyDeparture = ({ getFlights, departure, arival }) => {
   );
 };
 
-const mapDispatch = {
-  getFlights: flightsActions.fetchStartFlights,
-};
-
 const mapState = state => {
   return {
     departure: selectors.departureSelector(state),
   };
 };
 
-export default connect(mapState, mapDispatch)(TableBodyDeparture);
+export default connect(mapState, null)(TableBodyDeparture);
