@@ -1,9 +1,10 @@
 import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
-import flightsReducer from './featyres/table/table.reducer';
+// import flightsReducer from './featyres/table/table.reducer';
+import mainReducer from './featyres/main/main.reducer';
 import searchReducer from './featyres/search/search.reducer';
 import thunk from 'redux-thunk';
 
-const reducers = combineReducers({ flights: flightsReducer, searchValue: searchReducer });
+const reducers = combineReducers({ flights: mainReducer, searchValue: searchReducer });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

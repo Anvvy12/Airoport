@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import TableRow from '../departure/TableRowDeparture';
-import * as selectors from '../../table.selectors';
+import * as selectors from '../../../main/main.selectors';
 
 const TableBodyArrival = ({ arrival }) => {
   // const currentFlights = arrival.splice(0, 23);

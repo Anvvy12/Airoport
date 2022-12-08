@@ -4,7 +4,7 @@ import ResultContainerDepart from '../../flights/components/ResultContainerDepar
 import ResultContainerArrival from '../../flights/components/ResultContainerArrival';
 import CovidInfo from '../../covidInfo/components/CovidInfo';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import * as flightsActions from '../../table/table.actions';
+import * as flightsActions from '../main.actions';
 import { connect } from 'react-redux';
 import '../styles/main.scss';
 
