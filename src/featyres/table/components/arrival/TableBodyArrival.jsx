@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import TableRow from './TableRow';
-import * as flightsActions from '../table.actions.js';
-import * as selectors from '../table.selectors';
+import TableRow from '../TableRow';
+import * as flightsActions from '../../table.actions.js';
+import * as selectors from '../../table.selectors';
 
 const TableBodyArrival = ({ getFlights, arrival }) => {
   useEffect(() => {
@@ -14,7 +14,7 @@ const TableBodyArrival = ({ getFlights, arrival }) => {
     <tbody className="table-body">
       {currentFlights.map(flight => (
         <TableRow
-          //   term={flight.term}
+          term={flight.term}
           key={flight.ID}
           logo={flight.logo}
           cityTo={flight['airportToID.city']}

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import TableRow from './TableRow';
-import * as flightsActions from '../table.actions.js';
-import * as selectors from '../table.selectors';
+import TableRow from '../TableRow';
+import * as flightsActions from '../../table.actions.js';
+import * as selectors from '../../table.selectors';
 
 const TableBodyDeparture = ({ getFlights, departure, arival }) => {
   useEffect(() => {

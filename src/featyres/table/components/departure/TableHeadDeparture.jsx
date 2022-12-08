@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableHead = () => {
+const TableHeadDeparture = () => {
   return (
     <thead className="table-head">
       <tr className="table-head-row term">
@@ -28,4 +28,4 @@ const TableHead = () => {
   );
 };
 
-export default TableHead;
+export default TableHeadDeparture;
