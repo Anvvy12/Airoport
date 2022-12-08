@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import TableRow from '../TableRow';
+import TableRow from '../departure/TableRowDeparture';
 import * as flightsActions from '../../table.actions.js';
 import * as selectors from '../../table.selectors';
 
