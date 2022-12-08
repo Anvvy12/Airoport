@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Search from '../../search/components/Search';
 import ResultContainerDepart from '../../flights/components/ResultContainerDepart';
 import ResultContainerArrival from '../../flights/components/ResultContainerArrival';
 import CovidInfo from '../../covidInfo/components/CovidInfo';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import * as flightsActions from '../main.actions';
 
 import '../styles/main.scss';
 
 const Main = ({ getFlights }) => {
   useEffect(() => {
-    console.log('fetch');
     getFlights();
   }, []);
   return (
