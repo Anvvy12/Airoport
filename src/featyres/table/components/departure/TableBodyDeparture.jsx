@@ -6,6 +6,7 @@ import * as selectors from '../../table.selectors';
 
 const TableBodyDeparture = ({ getFlights, departure, arival }) => {
   useEffect(() => {
+    console.log('fetch');
     getFlights();
   }, []);
   const currentFlights = departure.splice(0, 23);
