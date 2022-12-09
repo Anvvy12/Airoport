@@ -16,13 +16,14 @@ const Main = ({ getFlights }) => {
   return (
     <main className="main">
       <div className="central-side">
-        <Search />
         <BrowserRouter>
           <Switch>
             <Route exact path="/">
+              <Search />
               <ResultContainerDepart />
             </Route>
             <Route path="/arrival">
+              <Search />
               <ResultContainerArrival />
             </Route>
           </Switch>
