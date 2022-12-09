@@ -11,11 +11,3 @@ export const getSerachingFlights = (departure, arival) => {
     },
   };
 };
-
-export const fetchSearchingFlights = searchInfo => {
-  return function (dispatch) {
-    fetchFlights(searchInfo).then(flights =>
-      dispatch(getSerachingFlights(flights.body.departure, flights.body.arival)),
-    );
-  };
-};
