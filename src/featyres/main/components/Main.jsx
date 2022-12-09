@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Search from '../../search/components/Search';
+import SearchDeparture from '../../search/components/SearchDeparture';
+import SearchArrival from '../../search/components/SearchArrival';
 import ResultContainerDepart from '../../flights/components/ResultContainerDepart';
 import ResultContainerArrival from '../../flights/components/ResultContainerArrival';
 import CovidInfo from '../../covidInfo/components/CovidInfo';
@@ -19,11 +20,11 @@ const Main = ({ getFlights }) => {
         <BrowserRouter>
           <Switch>
             <Route exact path="/">
-              <Search />
+              <SearchDeparture />
               <ResultContainerDepart />
             </Route>
             <Route path="/arrival">
-              <Search />
+              <SearchArrival />
               <ResultContainerArrival />
             </Route>
           </Switch>
