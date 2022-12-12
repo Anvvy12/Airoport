@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import TableRow from '../departure/TableRowDeparture';
+import TableRowArrival from './TableRowArrival';
 import * as selectors from '../../../main/main.selectors';
 
 const TableBodyArrival = ({ arrival }) => {
@@ -12,11 +12,11 @@ const TableBodyArrival = ({ arrival }) => {
   return (
     <tbody className="table-body">
       {arrival.map(flight => (
-        <TableRow
+        <TableRowArrival
           term={flight.term}
           key={flight.ID}
           logo={flight.logo}
-          cityTo={flight['airportToID.city']}
+          cityfrom={flight['airportFromID.city']}
           num={String(flight['carrierID.IATA'] + flight.fltNo)}
           companyName={flight['carrierID.code']}
           timeFact={flight.timeToStand}

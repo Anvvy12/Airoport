@@ -1,6 +1,6 @@
 import { FLIGHTS_BY_VALUE } from './search.actions';
 
-const initialState = '';
+const initialState = { searchInfo: '', searchArrival: {}, searchDeparture: {} };
 
 const searchReducer = (state = initialState, action) => {
   switch (action.type) {
