@@ -12,9 +12,9 @@ export const fillStartFlights = (departure, arrival) => {
   };
 };
 
-export const fetchStartFlights = () => {
+export const fetchStartFlights = date => {
   return function (dispatch) {
-    fetchFlights().then(flights =>
+    fetchFlights(date).then(flights =>
       dispatch(fillStartFlights(flights.body.departure, flights.body.arrival)),
     );
   };

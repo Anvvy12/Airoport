@@ -1,9 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
+import * as flightsActions from '../../main/main.actions';
 import '../styles/data-container.scss';
 
-const DataContainer = () => {
+const DataContainer = ({ getFlights }) => {
   let dateDay = new Date().getDate();
   let dateMonth = new Date().getMonth();
   const preventDay = `${dateDay - 1}/${dateMonth + 1}`;
@@ -11,8 +13,14 @@ const DataContainer = () => {
   const nextDay = `${dateDay + 1}/${dateMonth + 1}`;
 
   const handleDate = event => {
-    console.log(event.target.value);
-    return null;
+    const elementClassName = event.currentTarget.className;
+    const elementSentDate = event.currentTarget.firstElementChild.innerHTML
+      .replace('/', '-')
+      .concat(`-${new Date().getFullYear()}`);
+
+    getFlights(elementSentDate);
+    // console.log(elementClassName);
+    // console.log(elementSentDate);
   };
   return (
     <div className="calendar-date-wrapper">
@@ -20,7 +28,7 @@ const DataContainer = () => {
         <input type="date" className="calendar-button" value="" />
       </div>
       <div className="dates-container">
-        <div className="date esterday" value="s" onClick={handleDate}>
+        <div className="date esterday" onClick={handleDate}>
           <div className="data-num">{preventDay}</div>
           <div className="data-title">вчора</div>
         </div>
@@ -36,5 +44,8 @@ const DataContainer = () => {
     </div>
   );
 };
+const mapDispatch = {
+  getFlights: flightsActions.fetchStartFlights,
+};
 
-export default DataContainer;
+export default connect(null, mapDispatch)(DataContainer);
