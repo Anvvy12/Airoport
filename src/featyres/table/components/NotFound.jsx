@@ -3,9 +3,9 @@ import '../styles/not-found.scss';
 
 const NotFound = () => {
   return (
-    <tbody>
+    <tbody className="not-found-body">
       <tr colSpan="6" className="not-found-container">
-        <td>
+        <td className="not-found">
           <span className="not-found__text">Немає рейсів</span>
         </td>
       </tr>
