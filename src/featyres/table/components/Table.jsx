@@ -18,11 +18,15 @@ const Table = ({ arrival, departure }) => {
             {departure.length === 0 ? (
               <NotFound />
             ) : (
-              [<TableHeadDeparture />, <TableBodyDeparture />]
+              [<TableHeadDeparture key={1} />, <TableBodyDeparture key={2} />]
             )}
           </Route>
           <Route exact path="/arrival">
-            {arrival.length === 0 ? <NotFound /> : [<TableHeadArrival />, <TableBodyArrival />]}
+            {arrival.length === 0 ? (
+              <NotFound />
+            ) : (
+              [<TableHeadArrival key={1} />, <TableBodyArrival key={2} />]
+            )}
           </Route>
         </Switch>
       </BrowserRouter>
