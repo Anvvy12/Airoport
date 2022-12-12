@@ -4,7 +4,10 @@ import TableRow from '../departure/TableRowDeparture';
 import * as selectors from '../../../main/main.selectors';
 
 const TableBodyArrival = ({ arrival }) => {
-  // const currentFlights = arrival.splice(0, 23);
+  // console.log(arrival.length);
+  // if (arrival.length === 0) {
+  //   return <NotFound />;
+  // }
 
   return (
     <tbody className="table-body">

@@ -1,23 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TableHeadDeparture from './departure/TableHeadDeparture';
 import TableBodyDeparture from './departure/TableBodyDeparture';
 import TableHeadArrival from './arrival/TableHeadArrival';
 import TableBodyArrival from './arrival/TableBodyArrival';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NotFound from './NotFound';
+import * as selectors from '../../main/main.selectors';
 import '../styles/table.scss';
 
-const Table = () => {
+const Table = ({ arrival, departure }) => {
   return (
     <table className="table">
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <TableHeadDeparture />
-            <TableBodyDeparture />
+            {departure.length === 0 ? (
+              <NotFound />
+            ) : (
+              [<TableHeadDeparture />, <TableBodyDeparture />]
+            )}
           </Route>
           <Route exact path="/arrival">
-            <TableHeadArrival />
-            <TableBodyArrival />
+            {arrival.length === 0 ? <NotFound /> : [<TableHeadArrival />, <TableBodyArrival />]}
           </Route>
         </Switch>
       </BrowserRouter>
@@ -25,4 +30,11 @@ const Table = () => {
   );
 };
 
-export default Table;
+const mapState = state => {
+  return {
+    arrival: selectors.arivalSelector(state),
+    departure: selectors.departureSelector(state),
+  };
+};
+
+export default connect(mapState, null)(Table);

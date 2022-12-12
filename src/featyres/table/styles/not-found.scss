@@ -1,0 +1,12 @@
+.not-found {
+  text-align: center;
+  display: flex;
+  max-height: 300px;
+
+  justify-content: center;
+
+  &__text {
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
