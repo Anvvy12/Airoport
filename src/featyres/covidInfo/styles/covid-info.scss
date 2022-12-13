@@ -29,14 +29,16 @@
   border-top-right-radius: 60px;
   animation: angel-btn-down 0.3s forwards;
   margin-top: 10px;
+  display: flex;
+  color: #fff;
   &__link {
+    display: flex;
     padding: 20px 15px 0 20px;
     text-transform: uppercase;
     text-align: left;
     width: 100%;
     overflow: hidden;
     display: inline-block;
-    color: #fff;
     text-transform: uppercase;
     line-height: 25px;
   }
@@ -53,4 +55,11 @@
 
 .covid-info:hover {
   animation: angel-btn-up 0.3s forwards;
+}
+
+.doctor-icon {
+  width: 40px;
+  height: 40px;
+  padding-top: 30px;
+  padding-right: 35px;
 }

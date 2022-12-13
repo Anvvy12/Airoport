@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserDoctor } from '@fortawesome/free-solid-svg-icons';
 import '../styles/covid-info.scss';
 
 const CovidInfo = () => {
@@ -12,6 +14,7 @@ const CovidInfo = () => {
             <small className="covid-info__link-text-small">Для всіх охочих 24/7</small>
           </span>
         </a>
+        <FontAwesomeIcon icon={faUserDoctor} className="doctor-icon" />
       </div>
     </div>
   );

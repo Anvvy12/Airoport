@@ -3,7 +3,6 @@ import React from 'react';
 const TableRowArrival = ({ term, logo, cityfrom, num, companyName, timeCalc, timeFact }) => {
   const timeDepartureFakt = timeFact.substring(12, 16);
   const timeDepartureCalc = timeCalc.substring(12, 16);
-  console.log(cityfrom);
 
   const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
   return (
