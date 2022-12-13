@@ -32,6 +32,13 @@
 }
 
 .ditals {
+  text-align: start;
+  &__text {
+    color: #1eb7ee;
+    border-bottom: 1px solid #1eb7ee;
+  }
+
+  cursor: pointer;
   opacity: 0;
 }
 
@@ -53,6 +60,7 @@
 }
 .flights {
   text-align: center;
+  height: 72px;
 }
 
 .flights:nth-child(even) {
@@ -70,4 +78,17 @@
   font-weight: 600;
   height: 48px;
   text-align: start;
+}
+
+@keyframes show-ditals {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ditals:hover {
+  animation: show-ditals 0.4s forwards;
 }

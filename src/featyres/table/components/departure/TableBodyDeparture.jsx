@@ -7,8 +7,10 @@ import * as tableSelectors from '../../table.selectors';
 const TableBodyDeparture = ({ departure, searchingValue }) => {
   const currentFlights = departure.filter(
     flight =>
-      flight['airportToID.city'].includes(searchingValue.toUpperCase()) ||
-      String(flight['carrierID.IATA'] + flight.fltNo).includes(searchingValue.toUpperCase()),
+      flight['airportToID.city'].toUpperCase().includes(searchingValue.toUpperCase()) ||
+      String(flight['carrierID.IATA'] + flight.fltNo)
+        .toUpperCase()
+        .includes(searchingValue.toUpperCase()),
   );
 
   return (

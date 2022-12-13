@@ -27,7 +27,7 @@ const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeCalc, timeF
         {num}
       </th>
       <td className="table-down ditals" scope="col">
-        Деталі рейсу
+        <a className="ditals__text">Деталі рейсу</a>
       </td>
     </tr>
   );
