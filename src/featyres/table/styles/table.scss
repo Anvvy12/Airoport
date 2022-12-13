@@ -1,6 +1,8 @@
 .table-down {
   padding: 0.75em;
   text-align: center;
+  height: 40px;
+
   &__termA {
     color: #63c745;
     font-weight: 700;
@@ -25,10 +27,28 @@
     line-height: 35px;
     font-size: 22px;
   }
-  &__img {
-    padding-bottom: 0;
-    height: 40px;
+}
+
+.company-list {
+  align-items: center;
+  display: flex;
+
+  &__item {
+    display: flex;
   }
+  &__item-logo {
+    padding-bottom: 0;
+    height: 35px;
+    margin-right: 5px;
+  }
+}
+
+.flights-logo-container {
+}
+
+.company-logo {
+  text-align: center;
+  height: 40px;
 }
 
 .ditals {
@@ -55,12 +75,14 @@
   width: 100%;
 }
 
+.table-row {
+  height: 40px;
+}
 .table-row:nth-child(odd) {
   background: #e5eff3;
 }
 .flights {
   text-align: center;
-  height: 72px;
 }
 
 .flights:nth-child(even) {

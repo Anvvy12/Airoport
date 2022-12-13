@@ -19,7 +19,7 @@ const TableBodyDeparture = ({ departure, searchingValue }) => {
         <TableRowDeparture
           term={flight.term}
           key={flight.ID}
-          logo={flight.logo}
+          logo={flight.airline.en.logoSmallName}
           cityTo={flight['airportToID.city']}
           num={String(flight['carrierID.IATA'] + flight.fltNo)}
           companyName={flight['carrierID.code']}
