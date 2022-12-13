@@ -6,7 +6,7 @@ import * as searchActions from '../search.actions';
 import * as searcSelectors from '../search.selectors.js';
 import '../styles/search.scss';
 
-const SearchDeparture = ({ getSertchValue, searchValue }) => {
+const SearchDeparture = ({ getSertchValue }) => {
   const [serchParam, setSearchParam] = useState('');
 
   const handlChange = event => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import TableRow from './TableRowDeparture';
-import * as selectors from '../../../main/main.selectors';
+import * as mainSelectors from '../../../main/main.selectors';
 
 const TableBodyDeparture = ({ departure }) => {
   return (
@@ -24,7 +24,7 @@ const TableBodyDeparture = ({ departure }) => {
 
 const mapState = state => {
   return {
-    departure: selectors.departureSelector(state),
+    departure: mainSelectors.departureSelector(state),
   };
 };
 
