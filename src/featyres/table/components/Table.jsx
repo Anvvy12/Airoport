@@ -6,7 +6,7 @@ import TableBodyDeparture from './departure/TableBodyDeparture';
 import TableHeadArrival from './arrival/TableHeadArrival';
 import TableBodyArrival from './arrival/TableBodyArrival';
 import NotFound from './NotFound';
-import * as selectors from '../../main/main.selectors';
+import * as selectors from '../table.selectors';
 import '../styles/table.scss';
 
 const Table = ({ arrival, departure }) => {
@@ -36,7 +36,7 @@ const Table = ({ arrival, departure }) => {
 
 const mapState = state => {
   return {
-    arrival: selectors.arivalSelector(state),
+    arrival: selectors.arrivalSelector(state),
     departure: selectors.departureSelector(state),
   };
 };

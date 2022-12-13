@@ -2,12 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TableRow from './TableRowDeparture';
-import * as mainSelectors from '../../../main/main.selectors';
+import * as tableSelectors from '../../table.selectors';
 
-const TableBodyDeparture = ({ departure }) => {
+const TableBodyDeparture = ({ departure, searcheDeparture }) => {
+  const currentFlights = Object.keys(searcheDeparture).length === 0 ? departure : searcheDeparture;
+
   return (
     <tbody className="table-body">
-      {departure.map(flight => (
+      {currentFlights.map(flight => (
         <TableRow
           term={flight.term}
           key={flight.ID}
@@ -25,7 +27,8 @@ const TableBodyDeparture = ({ departure }) => {
 
 const mapState = state => {
   return {
-    departure: mainSelectors.departureSelector(state),
+    departure: tableSelectors.departureSelector(state),
+    searcheDeparture: tableSelectors.searchDepartureSelector(state),
   };
 };
 

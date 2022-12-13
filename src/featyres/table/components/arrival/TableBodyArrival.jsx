@@ -1,17 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TableRowArrival from './TableRowArrival';
-import * as selectors from '../../../main/main.selectors';
+import * as tableSelectors from '../../table.selectors';
 
-const TableBodyArrival = ({ arrival }) => {
-  // console.log(arrival.length);
-  // if (arrival.length === 0) {
-  //   return <NotFound />;
-  // }
+const TableBodyArrival = ({ arrival, searcheArrival }) => {
+  const currentFlights = Object.keys(searcheArrival).length === 0 ? arrival : searcheArrival;
 
   return (
     <tbody className="table-body">
-      {arrival.map(flight => (
+      {currentFlights.map(flight => (
         <TableRowArrival
           term={flight.term}
           key={flight.ID}
@@ -29,7 +27,8 @@ const TableBodyArrival = ({ arrival }) => {
 
 const mapState = state => {
   return {
-    arrival: selectors.arivalSelector(state),
+    arrival: tableSelectors.arrivalSelector(state),
+    searcheArrival: tableSelectors.searchArrivalSelector(state),
   };
 };
 
