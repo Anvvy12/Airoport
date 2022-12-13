@@ -4,8 +4,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TableRowArrival from './TableRowArrival';
 import * as tableSelectors from '../../table.selectors';
 
-const TableBodyArrival = ({ arrival, searcheArrival }) => {
-  const currentFlights = Object.keys(searcheArrival).length === 0 ? arrival : searcheArrival;
+const TableBodyArrival = ({ arrival, searchingValue }) => {
+  const currentFlights = arrival.filter(
+    flight =>
+      flight['airportFromID.city'].includes(searchingValue.toUpperCase()) ||
+      String(flight['carrierID.IATA'] + flight.fltNo).includes(searchingValue.toUpperCase()),
+  );
 
   return (
     <tbody className="table-body">
@@ -29,6 +33,7 @@ const mapState = state => {
   return {
     arrival: tableSelectors.arrivalSelector(state),
     searcheArrival: tableSelectors.searchArrivalSelector(state),
+    searchingValue: state.searching.searchInfo,
   };
 };
 

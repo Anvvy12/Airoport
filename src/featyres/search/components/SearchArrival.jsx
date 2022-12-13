@@ -30,7 +30,7 @@ const SearchArrival = ({ getSertchValue, searchValue }) => {
               className="search-form-block__input"
               type="text"
               placeholder="Номер рейсу або місто"
-              value={searchValue}
+              value={serchParam}
               onChange={handlChange}
             />
             <button className="search-form-block__btn" onClick={handleSearch}>
