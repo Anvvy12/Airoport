@@ -7,20 +7,21 @@ import * as searchActions from '../search.actions';
 
 import '../styles/search.scss';
 
-const SearchArrival = ({ getSertchValue, searchValue }) => {
+const SearchArrival = ({ getSertchValue }) => {
   const [serchParam, setSearchParam] = useState('');
 
   const handlChange = event => {
     setSearchParam(event.target.value);
   };
 
-  const handleSearch = () => {
+  const handelSubmit = () => {
+    event.preventDefault();
     getSertchValue(serchParam);
   };
   return (
     <div className="search-container">
       <div className="search-form-container">
-        <form className="search-form">
+        <form className="search-form" onSubmit={handelSubmit}>
           <label>
             <h2 className="search-form__title">пошук рейсу</h2>
           </label>
@@ -33,7 +34,7 @@ const SearchArrival = ({ getSertchValue, searchValue }) => {
               value={serchParam}
               onChange={handlChange}
             />
-            <button className="search-form-block__btn" onClick={handleSearch}>
+            <button className="search-form-block__btn" type="submit" onSubmit={handelSubmit}>
               знайти
             </button>
           </div>

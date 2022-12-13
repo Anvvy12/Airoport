@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Calendar from './Calendar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import * as flightsActions from '../../main/main.actions';
@@ -25,7 +26,7 @@ const DataContainer = ({ getFlights }) => {
   return (
     <div className="calendar-date-wrapper">
       <div className="calendar-container ">
-        <input type="date" className="calendar-button" value="" />
+        <Calendar />
       </div>
       <div className="dates-container">
         <div className="date esterday" onClick={handleDate}>
