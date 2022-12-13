@@ -3,26 +3,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import * as searchActions from '../search.actions';
+import { getSerachingValue } from '../search.actions';
 import * as searcSelectors from '../search.selectors.js';
 import '../styles/search.scss';
 
-const SearchDeparture = ({ getSertchValue }) => {
+const SearchDeparture = ({ setSearchingValue }) => {
   const [serchParam, setSearchParam] = useState('');
 
   const handlChange = event => {
     setSearchParam(event.target.value);
   };
 
-  const handleSearch = () => {
-    getSertchValue(serchParam);
+  const handelSubmit = event => {
+    event.preventDefault();
+    setSearchingValue(serchParam);
   };
-
-  const submit = () => {};
   return (
     <div className="search-container">
       <div className="search-form-container">
-        <form className="search-form" onSubmit={submit}>
+        <form className="search-form" onSubmit={handelSubmit}>
           <label>
             <h2 className="search-form__title">пошук рейсу</h2>
           </label>
@@ -35,7 +34,7 @@ const SearchDeparture = ({ getSertchValue }) => {
               value={serchParam}
               onChange={handlChange}
             />
-            <button className="search-form-block__btn" onClick={handleSearch}>
+            <button className="search-form-block__btn" type="submit" onSubmit={handelSubmit}>
               знайти
             </button>
           </div>
@@ -46,7 +45,7 @@ const SearchDeparture = ({ getSertchValue }) => {
 };
 
 const mapDispatch = {
-  getSertchValue: searchActions.getSerachingFlights,
+  setSearchingValue: getSerachingValue,
 };
 
 const mapState = state => {

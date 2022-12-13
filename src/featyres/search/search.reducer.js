@@ -1,15 +1,14 @@
-import { FLIGHTS_BY_VALUE } from './search.actions';
+import { FLIGHTS_VALUE } from './search.actions';
+import { SEARCHED_FLIGHT } from './search.actions';
 
-const initialState = { searchInfo: 'LO756', searchArrival: {}, searchDeparture: {} };
+const initialState = { searchInfo: '', searchArrival: {}, searchDeparture: {} };
 
 const searchReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FLIGHTS_BY_VALUE:
+    case FLIGHTS_VALUE:
       return {
         ...state,
-        searching: {
-          searchInfo: action.payload.searchInfo,
-        },
+        searchInfo: action.payload.value,
       };
     default:
       return state;

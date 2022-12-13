@@ -1,13 +1,18 @@
-import { fetchFlights } from '../../flights.gateway';
+export const FLIGHTS_VALUE = 'SEARTCH/FLIGHTS_VALUE';
+export const SEARCHED_FLIGHT = 'SEARTCH/SEARCHED_FLIGHT';
 
-export const FLIGHTS_BY_VALUE = 'SEARTCH/FLIGHTS_BY_VALUE';
-
-export const getSerachingFlights = (departure, arival) => {
+export const getSerachingValue = value => {
   return {
-    type: FLIGHTS_BY_VALUE,
+    type: FLIGHTS_VALUE,
     payload: {
-      departure,
-      arival,
+      value,
     },
   };
 };
+
+// const getSearchingFlight = () => {
+//   return {
+//     type: SEARCHED_FLIGHT,
+//     payload: addEventLiener,
+//   };
+// };

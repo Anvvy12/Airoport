@@ -44,7 +44,7 @@ const SearchArrival = ({ getSertchValue, searchValue }) => {
 };
 
 const mapDispatch = {
-  getSertchValue: searchActions.getSerachingFlights,
+  getSertchValue: searchActions.getSerachingValue,
 };
 
 const mapState = state => {
