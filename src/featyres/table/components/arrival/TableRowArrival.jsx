@@ -20,7 +20,7 @@ const TableRowArrival = ({ term, logo, cityfrom, num, companyName, timeCalc, tim
         Вилетів o {timeDepartureFakt}
       </th>
       <th className="table-down" scope="col">
-        <img src={logo} className="table-down__img" />
+        <img src={logo} className="table-down__img" alt="logo" />
         <span>{companyName}</span>
       </th>
       <th className="table-down" scope="col">
