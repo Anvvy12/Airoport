@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TableRow from './TableRowDeparture';
 import * as mainSelectors from '../../../main/main.selectors';
 

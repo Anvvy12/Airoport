@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as searchActions from '../search.actions';
 import * as searcSelectors from '../search.selectors.js';
 import '../styles/search.scss';
@@ -16,10 +17,12 @@ const SearchDeparture = ({ getSertchValue }) => {
   const handleSearch = () => {
     getSertchValue(serchParam);
   };
+
+  const submit = () => {};
   return (
     <div className="search-container">
       <div className="search-form-container">
-        <form className="search-form">
+        <form className="search-form" onSubmit={submit}>
           <label>
             <h2 className="search-form__title">пошук рейсу</h2>
           </label>
