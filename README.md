@@ -28,4 +28,4 @@ This layout only supports 1440px width
 
 ### Web page
 
--https://anvvy12.github.io/Price-Cards/
+- https://anvvy12.github.io/Airport/
