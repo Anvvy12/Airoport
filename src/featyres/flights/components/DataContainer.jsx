@@ -20,8 +20,6 @@ const DataContainer = ({ getFlights }) => {
       .concat(`-${new Date().getFullYear()}`);
 
     getFlights(elementSentDate);
-    // console.log(elementClassName);
-    // console.log(elementSentDate);
   };
   return (
     <div className="calendar-date-wrapper">
@@ -29,7 +27,7 @@ const DataContainer = ({ getFlights }) => {
         <Calendar />
       </div>
       <div className="dates-container">
-        <div className="date esterday" onClick={handleDate}>
+        <div className={`date esterday`} onClick={handleDate}>
           <div className="data-num">{preventDay}</div>
           <div className="data-title">вчора</div>
         </div>
