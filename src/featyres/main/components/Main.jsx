@@ -11,6 +11,10 @@ import * as flightsActions from '../main.actions';
 import '../styles/main.scss';
 
 const Main = ({ getFlights }) => {
+  const [isFetching, serFeatching] = useState(false);
+  console.log(isFetching);
+
+  setTimeout(() => {});
   useEffect(() => {
     getFlights();
   }, []);
