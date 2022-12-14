@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TableRowArrival from './TableRowArrival';
+import NotFound from '../NotFound';
 import * as tableSelectors from '../../table.selectors';
 
 const TableBodyArrival = ({ arrival, searchingValue }) => {
@@ -12,6 +13,16 @@ const TableBodyArrival = ({ arrival, searchingValue }) => {
         .toUpperCase()
         .includes(searchingValue.toUpperCase()),
   );
+
+  if (currentFlights.length === 0) {
+    return (
+      <tr>
+        <td colSpan="6">
+          <NotFound />
+        </td>
+      </tr>
+    );
+  }
 
   return (
     <tbody className="table-body">

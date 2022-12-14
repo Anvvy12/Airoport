@@ -13,6 +13,16 @@ const TableBodyDeparture = ({ departure, searchingValue }) => {
         .includes(searchingValue.toUpperCase()),
   );
 
+  if (currentFlights.length === 0) {
+    return (
+      <tr>
+        <td colSpan="6">
+          <NotFound />
+        </td>
+      </tr>
+    );
+  }
+
   return (
     <tbody className="table-body">
       {currentFlights.map(flight => (
