@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server -d --devtool eval-source-maps --open",
     "build": "webpack -p",
-    "deploy": "gh-pages -d bundle",
+    "deploy": "gh-pages -d dist",
     "predeploy": " npm run build"
   },
   "keywords": [],
