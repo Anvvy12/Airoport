@@ -7,32 +7,25 @@ const TableRowArrival = ({ term, logo, cityfrom, num, companyName, timeCalc, tim
   const classTerm = term == 'A' ? 'table-down__termA' : 'table-down__termB';
   return (
     <tr className="table-row flights">
-      <th className="table-down term" scope="col">
+      <th className="table-down term">
         <span className={classTerm}>{term}</span>
       </th>
-      <th className="table-down" scope="col">
-        {timeDepartureCalc}
-      </th>
-      <td className="table-down" scope="col">
-        {cityfrom}
-      </td>
-      <th className="table-down" scope="col">
-        Вилетів o {timeDepartureFakt}
-      </th>
-      <th className="table-down" scope="col">
+      <th className="table-down">{timeDepartureCalc}</th>
+      <td className="table-down city">{cityfrom}</td>
+      <th className="table-down">Вилетів o {timeDepartureFakt}</th>
+      <th className="table-down">
         <ul className="company-list">
           <li className="company-list__item">
-            <div data-v-7746f986="" class="logo">
-              <img src={logo} className="table-down__img" alt="logo" />
+            <div data-v-7746f986="" class="flights-logo-container">
+              <img src={logo} className="company-list__item-logo" alt="logo" />
+
+              <span data-v-7746f986="">{companyName}</span>
             </div>
-            <p data-v-7746f986="">{companyName}</p>
           </li>
         </ul>
       </th>
-      <th className="table-down" scope="col">
-        {num}
-      </th>
-      <td className="table-down ditals" scope="col">
+      <th className="table-down">{num}</th>
+      <td className="table-down ditals">
         <a className="ditals__text">Деталі рейсу</a>
       </td>
     </tr>

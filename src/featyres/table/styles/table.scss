@@ -1,6 +1,6 @@
 .table-down {
   padding: 0.75em;
-  text-align: center;
+  text-align: start;
   height: 40px;
 
   &__termA {
@@ -29,9 +29,30 @@
   }
 }
 
+.term {
+  text-align: center;
+}
+.termA {
+  color: #63c745;
+  font-weight: 700;
+  border: 1px solid #63c745;
+  border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 22px;
+}
+
+.city {
+  width: 170px;
+}
+
 .company-list {
   align-items: center;
   display: flex;
+  align-items: center;
 
   &__item {
     display: flex;
@@ -41,9 +62,6 @@
     height: 35px;
     margin-right: 5px;
   }
-}
-
-.flights-logo-container {
 }
 
 .company-logo {
