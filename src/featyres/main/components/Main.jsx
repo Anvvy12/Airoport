@@ -6,34 +6,43 @@ import SearchArrival from '../../search/components/SearchArrival';
 import ResultContainerDepart from '../../flights/components/ResultContainerDepart';
 import ResultContainerArrival from '../../flights/components/ResultContainerArrival';
 import CovidInfo from '../../covidInfo/components/CovidInfo';
+import Spinner from '../../spinner/components/Spinner';
 import * as flightsActions from '../main.actions';
 
 import '../styles/main.scss';
 
 const Main = ({ getFlights }) => {
-  const [isFetching, serFeatching] = useState(false);
+  const [isFetching, serFeatching] = useState(true);
   console.log(isFetching);
 
-  setTimeout(() => {});
   useEffect(() => {
+    console.log(isFetching);
     getFlights();
+    serFeatching(false);
   }, []);
+
   return (
     <main className="main">
       <div className="central-side">
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/">
-              <SearchDeparture />
-              <ResultContainerDepart />
-            </Route>
-            <Route path="/arrival">
-              <SearchArrival />
-              <ResultContainerArrival />
-            </Route>
-          </Switch>
-        </BrowserRouter>
-        <CovidInfo />
+        {isFetching ? (
+          <Spinner />
+        ) : (
+          <>
+            <BrowserRouter>
+              <Switch>
+                <Route exact path="/">
+                  <SearchDeparture />
+                  <ResultContainerDepart />
+                </Route>
+                <Route path="/arrival">
+                  <SearchArrival />
+                  <ResultContainerArrival />
+                </Route>
+              </Switch>
+            </BrowserRouter>
+            <CovidInfo />
+          </>
+        )}
       </div>
     </main>
   );

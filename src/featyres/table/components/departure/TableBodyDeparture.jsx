@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TableRowDeparture from './TableRowDeparture';
 import * as tableSelectors from '../../table.selectors';
+import NotFound from '../NotFound';
 
 const TableBodyDeparture = ({ departure, searchingValue }) => {
   const currentFlights = departure.filter(
