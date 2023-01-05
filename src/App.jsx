@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import Header from './featyres/header/components/Header';
 import Footer from './featyres/footer/components/Footer';
+import Header from './featyres/header/components/Header';
 import Main from './featyres/main/components/Main';
 import store from './store';
 
