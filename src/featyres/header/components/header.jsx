@@ -4,7 +4,7 @@ import '../styles/header.scss';
 const Header = () => {
   return (
     <header className="header">
-      <div className="wrapper">
+      {/* <div className="wrapper">
         <div className="logo-container">
           <img
             src="https://iev.aero/_nuxt/img/logo@2x.2d2c20b.png"
@@ -34,7 +34,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
     </header>
   );
 };
