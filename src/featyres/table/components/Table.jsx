@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import TableHeadDeparture from './departure/TableHeadDeparture';
 import TableBodyDeparture from './departure/TableBodyDeparture';
-import TableHeadArrival from './arrival/TableHeadArrival';
+import TableHead from './TableHead';
 import TableBodyArrival from './arrival/TableBodyArrival';
 import NotFound from './NotFound';
 import * as selectors from '../table.selectors';
@@ -24,7 +23,7 @@ const Table = ({ arrival, departure }) => {
                 </tr>
               </tbody>
             ) : (
-              [<TableHeadDeparture key={1} />, <TableBodyDeparture key={2} />]
+              [<TableHead key={1} text={'Напрямок'} />, <TableBodyDeparture key={2} />]
             )}
           </Route>
           <Route exact path="/arrival">
@@ -37,7 +36,7 @@ const Table = ({ arrival, departure }) => {
                 </tr>
               </tbody>
             ) : (
-              [<TableHeadArrival key={1} />, <TableBodyArrival key={2} />]
+              [<TableHead key={1} text={'Прилітає з'} />, <TableBodyArrival key={2} />]
             )}
           </Route>
         </Switch>

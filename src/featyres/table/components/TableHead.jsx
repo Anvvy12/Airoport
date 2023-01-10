@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableHeadDeparture = () => {
+const TableHeadArrival = ({ text }) => {
   return (
     <thead className="table-head">
       <tr className="table-head-row term">
@@ -11,7 +11,7 @@ const TableHeadDeparture = () => {
           Розклад
         </th>
         <td className="table-down" scope="col">
-          Напрямок
+          {text}
         </td>
         <th className="table-down" scope="col">
           Статус
@@ -28,4 +28,4 @@ const TableHeadDeparture = () => {
   );
 };
 
-export default TableHeadDeparture;
+export default TableHeadArrival;
