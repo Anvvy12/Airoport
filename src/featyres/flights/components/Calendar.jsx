@@ -1,10 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as flightsActions from '../../main/main.actions';
 import { toLocaleFormat } from '../../../helper/helper';
 import '../styles/calendar.scss';
 
-const Calendar = ({ handleCalendarDate }) => {
+const Calendar = ({ getFlights }) => {
   const handlInput = event => {
-    handleCalendarDate(toLocaleFormat('%D-%M-%Y', event.target.value));
+    getFlights(toLocaleFormat('%D-%M-%Y', event.target.value));
+    console.log(toLocaleFormat('%D-%M-%Y', event.target.value));
   };
 
   return (
@@ -20,4 +23,8 @@ const Calendar = ({ handleCalendarDate }) => {
   );
 };
 
-export default Calendar;
+const mapDispatch = {
+  getFlights: flightsActions.fetchStartFlights,
+};
+
+export default connect(null, mapDispatch)(Calendar);
