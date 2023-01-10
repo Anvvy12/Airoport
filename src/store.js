@@ -1,5 +1,4 @@
 import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
-// import flightsReducer from './featyres/table/table.reducer';
 import mainReducer from './featyres/main/main.reducer';
 import searchReducer from './featyres/search/search.reducer';
 import thunk from 'redux-thunk';
