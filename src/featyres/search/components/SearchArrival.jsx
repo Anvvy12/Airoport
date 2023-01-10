@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import * as searcSelectors from '../search.selectors';
@@ -7,11 +7,9 @@ import * as searchActions from '../search.actions';
 
 import '../styles/search.scss';
 
-const SearchArrival = ({ getSertchValue }) => {
-  const [serchParam, setSearchParam] = useState('');
-
+const SearchArrival = ({ getSertchValue, searchValue }) => {
   const handlChange = event => {
-    setSearchParam(event.target.value);
+    getSertchValue(event.target.value);
   };
 
   const handelSubmit = () => {
@@ -31,7 +29,7 @@ const SearchArrival = ({ getSertchValue }) => {
               className="search-form-block__input"
               type="text"
               placeholder="Номер рейсу або місто"
-              value={serchParam}
+              value={searchValue}
               onChange={handlChange}
             />
             <button className="search-form-block__btn" type="submit" onSubmit={handelSubmit}>

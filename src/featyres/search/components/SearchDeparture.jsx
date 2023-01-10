@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
@@ -6,11 +6,9 @@ import { getSerachingValue } from '../search.actions';
 import * as searcSelectors from '../search.selectors.js';
 import '../styles/search.scss';
 
-const SearchDeparture = ({ setSearchingValue }) => {
-  const [serchParam, setSearchParam] = useState('');
-
+const SearchDeparture = ({ setSearchingValue, searchValue }) => {
   const handlChange = event => {
-    setSearchParam(event.target.value);
+    setSearchingValue(event.target.value);
   };
 
   const handelSubmit = event => {
@@ -30,7 +28,7 @@ const SearchDeparture = ({ setSearchingValue }) => {
               className="search-form-block__input"
               type="text"
               placeholder="Номер рейсу або місто"
-              value={serchParam}
+              value={searchValue}
               onChange={handlChange}
             />
             <button className="search-form-block__btn" type="submit" onSubmit={handelSubmit}>
