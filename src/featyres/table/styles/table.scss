@@ -1,6 +1,5 @@
 .table-down {
   padding: 0.75em;
-  text-align: start;
   height: 40px;
 
   &__termA {
@@ -30,7 +29,30 @@
 }
 
 .term {
-  text-align: center;
+  width: 125px;
+}
+.start {
+  text-align: start;
+}
+
+.timetable {
+  width: 115px;
+}
+
+.ariv-dep {
+  width: 215px;
+}
+
+.status {
+  width: 200px;
+}
+
+.company {
+  width: 170px;
+}
+
+.rais {
+  width: 120px;
 }
 .termA {
   color: #63c745;
