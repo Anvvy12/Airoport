@@ -13,18 +13,22 @@ const DataContainer = ({ getFlights }) => {
   const actualDay = `${dateDay}/${dateMonth + 1}`;
   const nextDay = `${dateDay + 1}/${dateMonth + 1}`;
 
+  const handleCalendarDate = calendarDate => {
+    getFlights(calendarDate);
+  };
+
   const handleDate = event => {
-    const elementClassName = event.currentTarget.className;
     const elementSentDate = event.currentTarget.firstElementChild.innerHTML
       .replace('/', '-')
       .concat(`-${new Date().getFullYear()}`);
 
     getFlights(elementSentDate);
   };
+
   return (
     <div className="calendar-date-wrapper">
       <div className="calendar-container ">
-        <Calendar />
+        <Calendar handleCalendarDate={handleCalendarDate} />
       </div>
       <div className="dates-container">
         <div className={`date esterday`} onClick={handleDate}>
