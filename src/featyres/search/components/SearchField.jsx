@@ -7,7 +7,7 @@ import * as searchActions from '../search.actions';
 
 import '../styles/search.scss';
 
-const SearchArrival = ({ getSertchValue, searchValue }) => {
+const SearchField = ({ getSertchValue, searchValue }) => {
   const handlChange = event => {
     getSertchValue(event.target.value);
   };
@@ -52,4 +52,4 @@ const mapState = state => {
   };
 };
 
-export default connect(mapState, mapDispatch)(SearchArrival);
+export default connect(mapState, mapDispatch)(SearchField);

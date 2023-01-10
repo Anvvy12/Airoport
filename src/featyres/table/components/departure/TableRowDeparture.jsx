@@ -16,7 +16,7 @@ const FlightstableRow = ({ term, logo, cityTo, num, companyName, timeCalc, timeF
       <th className="table-down">
         <ul className="company-list">
           <li className="company-list__item">
-            <div data-v-7746f986="" class="flights-logo-container">
+            <div data-v-7746f986="" className="flights-logo-container">
               <img src={logo} className="company-list__item-logo" alt="logo" />
 
               <span data-v-7746f986="">{companyName}</span>

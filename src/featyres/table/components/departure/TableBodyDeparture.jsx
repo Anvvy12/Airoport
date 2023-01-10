@@ -15,11 +15,13 @@ const TableBodyDeparture = ({ departure, searchingValue }) => {
 
   if (currentFlights.length === 0) {
     return (
-      <tr>
-        <td colSpan="6">
-          <NotFound />
-        </td>
-      </tr>
+      <tbody>
+        <tr>
+          <td colSpan="6">
+            <NotFound />
+          </td>
+        </tr>
+      </tbody>
     );
   }
 

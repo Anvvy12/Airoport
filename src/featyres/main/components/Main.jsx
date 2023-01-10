@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import SearchDeparture from '../../search/components/SearchDeparture';
-import SearchArrival from '../../search/components/SearchArrival';
+import SearchField from '../../search/components/SearchField';
 import ResultContainerDepart from '../../flights/components/ResultContainerDepart';
 import ResultContainerArrival from '../../flights/components/ResultContainerArrival';
 import CovidInfo from '../../covidInfo/components/CovidInfo';
@@ -13,10 +12,8 @@ import '../styles/main.scss';
 
 const Main = ({ getFlights }) => {
   const [isFetching, serFeatching] = useState(true);
-  console.log(isFetching);
 
   useEffect(() => {
-    console.log(isFetching);
     getFlights();
     serFeatching(false);
   }, []);
@@ -31,11 +28,11 @@ const Main = ({ getFlights }) => {
             <BrowserRouter>
               <Switch>
                 <Route exact path="/">
-                  <SearchDeparture />
+                  <SearchField />
                   <ResultContainerDepart />
                 </Route>
                 <Route path="/arrival">
-                  <SearchArrival />
+                  <SearchField />
                   <ResultContainerArrival />
                 </Route>
               </Switch>
