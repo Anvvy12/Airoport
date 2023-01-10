@@ -1,5 +1,5 @@
 import React from 'react';
-import DataContainer from '../../flights/components/DataContainer';
+import DataContainer from '../../containers/components/DataContainer';
 import Table from './Table';
 import '../styles/result-container.scss';
 
