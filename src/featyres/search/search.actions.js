@@ -9,10 +9,3 @@ export const getSerachingValue = value => {
     },
   };
 };
-
-// const getSearchingFlight = () => {
-//   return {
-//     type: SEARCHED_FLIGHT,
-//     payload: addEventLiener,
-//   };
-// };

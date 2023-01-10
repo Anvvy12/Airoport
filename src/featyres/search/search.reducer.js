@@ -1,7 +1,6 @@
 import { FLIGHTS_VALUE } from './search.actions';
-import { SEARCHED_FLIGHT } from './search.actions';
 
-const initialState = { searchInfo: '', searchArrival: {}, searchDeparture: {} };
+const initialState = { searchInfo: '' };
 
 const searchReducer = (state = initialState, action) => {
   switch (action.type) {
