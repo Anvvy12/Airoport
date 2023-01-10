@@ -15,26 +15,14 @@ const Table = ({ arrival, departure }) => {
         <Switch>
           <Route exact path="/">
             {departure.length === 0 ? (
-              <tbody>
-                <tr>
-                  <td colSpan="6">
-                    <NotFound />
-                  </td>
-                </tr>
-              </tbody>
+              <NotFound />
             ) : (
               [<TableHead key={1} text={'Напрямок'} />, <TableBodyDeparture key={2} />]
             )}
           </Route>
           <Route exact path="/arrival">
             {arrival.length === 0 ? (
-              <tbody>
-                <tr>
-                  <td colSpan="6">
-                    <NotFound />
-                  </td>
-                </tr>
-              </tbody>
+              <NotFound />
             ) : (
               [<TableHead key={1} text={'Прилітає з'} />, <TableBodyArrival key={2} />]
             )}

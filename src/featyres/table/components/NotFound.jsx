@@ -3,9 +3,15 @@ import '../styles/not-found.scss';
 
 const NotFound = () => {
   return (
-    <div className="not-found">
-      <div className="not-found__text">Немає рейсів</div>
-    </div>
+    <tbody>
+      <tr>
+        <td colSpan="7">
+          <div className="not-found">
+            <div className="not-found__text">Немає рейсів</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
   );
 };
 

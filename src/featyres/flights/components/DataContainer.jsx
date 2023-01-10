@@ -16,6 +16,7 @@ const DataContainer = ({ getFlights }) => {
       new Date().getFullYear(),
     )}`;
     const sendingDate = toLocaleFormat('%M-%D-%Y', actualDate);
+    console.log(sendingDate);
     getFlights(sendingDate);
   };
 
@@ -26,15 +27,21 @@ const DataContainer = ({ getFlights }) => {
       </div>
       <div className="dates-container">
         <div className={`date esterday`} onClick={handleDate}>
-          <div className="data-num">{`${dateDay - 1}/${dateMonth + 1}`}</div>
+          <div className="data-num">{`${dateDay - 1 < 10 ? `0${dateDay - 1}` : dateDay - 1}/${
+            dateMonth + 1 < 10 ? `0${dateMonth + 1}` : dateMonth + 1
+          }`}</div>
           <div className="data-title">вчора</div>
         </div>
         <div className="date today" onClick={handleDate}>
-          <div className="data-num">{`${dateDay}/${dateMonth + 1}`}</div>
+          <div className="data-num">{`${dateDay < 10 ? `0${dateDay}` : dateDay}/${
+            dateMonth + 1 < 10 ? `0${dateMonth + 1}` : dateMonth + 1
+          }`}</div>
           <div className="data-title">сьогодні</div>
         </div>
         <div className="date tommorow" onClick={handleDate}>
-          <div className="data-num">{`${dateDay + 1}/${dateMonth + 1}`}</div>
+          <div className="data-num">{`${dateDay + 1 < 10 ? `0${dateDay + 1}` : dateDay + 1}/${
+            dateMonth + 1 < 10 ? `0${dateMonth + 1}` : dateMonth + 1
+          }`}</div>
           <div className="data-title">завтра</div>
         </div>
       </div>

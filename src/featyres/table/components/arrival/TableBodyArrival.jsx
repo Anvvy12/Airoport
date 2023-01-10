@@ -15,15 +15,7 @@ const TableBodyArrival = ({ arrival, searchingValue }) => {
   );
 
   if (currentFlights.length === 0) {
-    return (
-      <tbody>
-        <tr>
-          <td colSpan="6">
-            <NotFound />
-          </td>
-        </tr>
-      </tbody>
-    );
+    return <NotFound />;
   }
 
   return (
