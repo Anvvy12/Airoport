@@ -7,7 +7,6 @@ import '../styles/calendar.scss';
 const Calendar = ({ getFlights }) => {
   const handleChange = event => {
     getFlights(toLocaleFormat('%D-%M-%Y', event.target.value));
-    console.log(toLocaleFormat('%D-%M-%Y', event.target.value));
   };
 
   return (

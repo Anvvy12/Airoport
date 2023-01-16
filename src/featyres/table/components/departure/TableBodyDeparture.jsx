@@ -42,8 +42,7 @@ const TableBodyDeparture = ({ departure, searchingValue }) => {
 const mapState = state => {
   return {
     departure: tableSelectors.departureSelector(state),
-    searcheDeparture: tableSelectors.searchDepartureSelector(state),
-    searchingValue: state.searching.searchInfo,
+    searchingValue: tableSelectors.searchingValueSelector(state),
   };
 };
 

@@ -7,9 +7,10 @@ import * as tableSelectors from '../../table.selectors';
 
 const TableBodyArrival = ({ arrival, searchingValue }) => {
   const upperSearchingValue = searchingValue.toUpperCase();
+
   const currentFlights = arrival.filter(
     flight =>
-      flight['airportToID.city'].toUpperCase().includes(upperSearchingValue) ||
+      flight['airportFromID.city'].toUpperCase().includes(upperSearchingValue) ||
       String(flight['carrierID.IATA'] + flight.fltNo)
         .toUpperCase()
         .includes(upperSearchingValue) ||
@@ -42,8 +43,7 @@ const TableBodyArrival = ({ arrival, searchingValue }) => {
 const mapState = state => {
   return {
     arrival: tableSelectors.arrivalSelector(state),
-    searcheArrival: tableSelectors.searchArrivalSelector(state),
-    searchingValue: state.searching.searchInfo,
+    searchingValue: tableSelectors.searchingValueSelector(state),
   };
 };
 
