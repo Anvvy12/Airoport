@@ -6,12 +6,15 @@ import NotFound from '../NotFound';
 import * as tableSelectors from '../../table.selectors';
 
 const TableBodyArrival = ({ arrival, searchingValue }) => {
+  const upperSearchingValue = searchingValue.toUpperCase();
   const currentFlights = arrival.filter(
     flight =>
-      flight['airportFromID.city'].toUpperCase().includes(searchingValue.toUpperCase()) ||
+      flight['airportToID.city'].toUpperCase().includes(upperSearchingValue) ||
       String(flight['carrierID.IATA'] + flight.fltNo)
         .toUpperCase()
-        .includes(searchingValue.toUpperCase()),
+        .includes(upperSearchingValue) ||
+      flight.airline.en.name.toUpperCase().includes(upperSearchingValue) ||
+      flight.airline.en.icao.toUpperCase().includes(upperSearchingValue),
   );
 
   if (currentFlights.length === 0) {
