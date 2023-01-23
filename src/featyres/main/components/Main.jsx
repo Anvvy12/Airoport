@@ -49,10 +49,4 @@ const mapDispatch = {
   getFlights: flightsActions.fetchStartFlights,
 };
 
-// const mapState = state => {
-//   return {
-//     a: state,
-//   };
-// };
-
 export default connect(null, mapDispatch)(Main);

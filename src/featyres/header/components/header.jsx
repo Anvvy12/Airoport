@@ -6,7 +6,11 @@ const Header = () => {
     <header className="header">
       <div className="wrapper">
         <div className="logo-container">
-          <img src="../../../img/header/logo@2x.webp" className="logo-container__logo" alt="logo" />
+          <img
+            srcSet="../../../../img/header/logo@2x.png"
+            className="logo-container__logo"
+            alt="logo"
+          />
         </div>
         <nav className="navigation">
           <ul className="navigation-list">

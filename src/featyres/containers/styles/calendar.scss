@@ -1,10 +1,18 @@
+.faf {
+  color: #1eb7ee;
+  width: 50px;
+  height: 50px;
+}
+
 .date {
   &__input {
     position: absolute;
-    // visibility: hidden;
+    width: 45px;
+    height: 45px;
   }
 
   &__setter {
+    padding-left: 15px;
     &_calendar {
       width: 80px;
       margin-right: 10px;
@@ -22,7 +30,7 @@
       display: block;
       height: 40px;
       width: 40px;
-      // background-image: url('../../../img/date.png');
+
       background-position: center;
       background-size: 40px;
       background-repeat: no-repeat;

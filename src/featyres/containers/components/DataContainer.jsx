@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import Calendar from './Calendar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
-import { toLocaleFormat } from '../../../helper/helper';
 import * as flightsActions from '../../main/main.actions';
 import '../styles/data-container.scss';
 
@@ -14,10 +13,9 @@ const DataContainer = ({ getFlights }) => {
   const handleDate = event => {
     const actualDate = `${event.currentTarget.firstElementChild.innerHTML}-${String(
       new Date().getFullYear(),
-    )}`;
-    const sendingDate = toLocaleFormat('%M-%D-%Y', actualDate);
-    console.log(sendingDate);
-    getFlights(sendingDate);
+    )}`.replace('/', '-');
+    console.log(actualDate);
+    getFlights(actualDate);
   };
 
   return (
