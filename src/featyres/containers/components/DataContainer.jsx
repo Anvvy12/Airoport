@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import Calendar from './Calendar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import * as flightsActions from '../../main/main.actions';
 import '../styles/data-container.scss';
 
@@ -14,7 +12,6 @@ const DataContainer = ({ getFlights }) => {
     const actualDate = `${event.currentTarget.firstElementChild.innerHTML}-${String(
       new Date().getFullYear(),
     )}`.replace('/', '-');
-    console.log(actualDate);
     getFlights(actualDate);
   };
 
@@ -24,19 +21,19 @@ const DataContainer = ({ getFlights }) => {
         <Calendar />
       </div>
       <div className="dates-container">
-        <div className={`date esterday`} onClick={handleDate}>
+        <div className="date" onClick={handleDate}>
           <div className="data-num">{`${dateDay - 1 < 10 ? `0${dateDay - 1}` : dateDay - 1}/${
             dateMonth + 1 < 10 ? `0${dateMonth + 1}` : dateMonth + 1
           }`}</div>
           <div className="data-title">вчора</div>
         </div>
-        <div className="date today" onClick={handleDate}>
+        <div className="date" onClick={handleDate}>
           <div className="data-num">{`${dateDay < 10 ? `0${dateDay}` : dateDay}/${
             dateMonth + 1 < 10 ? `0${dateMonth + 1}` : dateMonth + 1
           }`}</div>
           <div className="data-title">сьогодні</div>
         </div>
-        <div className="date tommorow" onClick={handleDate}>
+        <div className="date" onClick={handleDate}>
           <div className="data-num">{`${dateDay + 1 < 10 ? `0${dateDay + 1}` : dateDay + 1}/${
             dateMonth + 1 < 10 ? `0${dateMonth + 1}` : dateMonth + 1
           }`}</div>
