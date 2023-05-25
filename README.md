@@ -28,4 +28,5 @@ This layout only supports 1440px width
 
 ### Web page
 
-- https://anvvy12.github.io/Airport/
+- https://endearing-syrniki-47c900.netlify.app/
+
